@@ -13,8 +13,16 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ExampleApp.SqlDatabase", "E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B967355D-1E1E-4F1D-9DC1-A509E41EBD6B}"
 	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
 		readme.md = readme.md
-		setup-local.bat = setup-local.bat
+		build.bat = build.bat
+		setup.bat = setup.bat
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "parent", "parent", "{5CDF9E19-5AA0-41C0-A48C-83AC26E5D46C}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\.gitignore = ..\..\.gitignore
+		.config\dotnet-tools.json = .config\dotnet-tools.json
 	EndProjectSection
 EndProject
 Global
@@ -44,6 +52,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5CDF9E19-5AA0-41C0-A48C-83AC26E5D46C} = {B967355D-1E1E-4F1D-9DC1-A509E41EBD6B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E75D4CA-F5C3-44F5-9B9A-E3DF4F577D50}

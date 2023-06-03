@@ -3,9 +3,19 @@
   <Sdk Name="Microsoft.Build.Sql" Version="0.1.10-preview" />
   <PropertyGroup>
     <Name>ExampleApp.SqlDatabase</Name>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
     <ModelCollation>1033, CI</ModelCollation>
     <TargetDatabaseSet>True</TargetDatabaseSet>
     <ProjectGuid>{b9621b46-4fc0-4760-b452-756f7fa2776c}</ProjectGuid>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Generated" />
+    <Folder Include="Examples" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Examples\SQLQuery1.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Generated\ApplicationIdentityDbContext.sql" />
+  </ItemGroup>
 </Project>
