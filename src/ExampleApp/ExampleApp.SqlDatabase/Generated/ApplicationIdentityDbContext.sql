@@ -1,7 +1,4 @@
-﻿--IF SCHEMA_ID(N'ApplicationIdentity') IS NULL EXEC(N'CREATE SCHEMA [ApplicationIdentity];');
---GO
-
-CREATE SCHEMA [ApplicationIdentity];
+﻿CREATE SCHEMA [ApplicationIdentity];
 GO
 
 

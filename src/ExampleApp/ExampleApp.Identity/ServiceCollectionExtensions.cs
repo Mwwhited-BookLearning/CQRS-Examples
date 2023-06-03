@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Framework.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -6,14 +7,13 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace ExampleApp.Identity
 {
-
     public static class ServiceCollectionExtensions
     {
         public static IServiceCollection AddIdentityServices(this IServiceCollection services, IConfiguration config)
         {
-
             services.AddDbContext<ApplicationIdentityDbContext>(options =>
                 options.UseSqlServer(config.GetConnectionString(ApplicationIdentityDbContext.Schema))
+                    .ExtendMigrations()
                 );
 
             services.AddDefaultIdentity<ApplicationIdentityUser>(options =>

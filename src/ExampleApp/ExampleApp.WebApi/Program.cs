@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ExampleApp.Identity;
+using ExampleApp.WebApi.BackgroundServices;
 
 namespace ExampleApp.WebApi
 {
@@ -13,6 +14,10 @@ namespace ExampleApp.WebApi
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddIdentityServices(builder.Configuration);
+
+            builder.Services
+                .AddPingerService()
+                ;
 
             // Add services to the container.
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme);
