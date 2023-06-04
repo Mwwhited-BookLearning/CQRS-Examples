@@ -11,4 +11,8 @@
     <ProjectReference Include="..\Framework.System\Framework.System.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="MessageTypes\" />
+  </ItemGroup>
+
 </Project>

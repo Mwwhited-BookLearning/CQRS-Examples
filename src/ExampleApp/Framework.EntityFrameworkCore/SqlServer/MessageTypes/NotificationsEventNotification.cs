@@ -2,7 +2,10 @@
 
 namespace Framework.EntityFrameworkCore.SqlServer.MessageTypes;
 
-[MessageType(Name = "http://schemas.microsoft.com/SQL/Notifications/EventNotification", Validation = MessageTypeValidations.WellFormedXml)]
 public class NotificationsEventNotification : IMessageType
 {
+    public string? Name => "http://schemas.microsoft.com/SQL/Notifications/EventNotification";
+    public string? Schema => null;
+    public string? Owner => null;
+    public MessageTypeValidations Validation => MessageTypeValidations.WellFormedXml;
 }

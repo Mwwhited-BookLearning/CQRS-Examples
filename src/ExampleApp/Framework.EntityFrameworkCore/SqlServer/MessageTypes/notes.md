@@ -115,6 +115,11 @@ CREATE QUEUE <object>
 
 #### Enumerate
 
+```sql
+SELECT *
+FROM sys.service_queues
+```
+
 ### Services
 
 https://learn.microsoft.com/en-us/sql/t-sql/statements/create-service-transact-sql?view=sql-server-ver16
@@ -127,4 +132,21 @@ CREATE SERVICE service_name
    ON QUEUE [ schema_name. ]queue_name  
    [ ( contract_name | [DEFAULT][ ,...n ] ) ]  
 [ ; ]
+```
+
+
+#### Enumerate
+
+```sql
+SELECT 
+	services.name AS [ServiceName],
+	service_queues.name AS [QueueName],
+	service_contracts.name AS [ContractName]
+FROM sys.services
+INNER JOIN sys.service_queues
+	ON service_queues.object_id = services.service_queue_id
+LEFT OUTER JOIN sys.service_contract_usages
+	ON service_contract_usages.service_id = services.service_id
+LEFT OUTER JOIN sys.service_contracts
+	ON service_contracts.service_contract_id = service_contract_usages.service_contract_id
 ```

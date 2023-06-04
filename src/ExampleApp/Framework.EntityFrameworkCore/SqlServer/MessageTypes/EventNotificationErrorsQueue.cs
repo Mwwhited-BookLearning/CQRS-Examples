@@ -2,13 +2,11 @@
 
 namespace System.Messages;
 
-[QueueType(
-    Name = nameof(EventNotificationErrorsQueue),
-    PoisonMessageHandling = false,
-    Retention = false,
-    Schema = "dbo",
-    Status = true
-    )]
 public class EventNotificationErrorsQueue : IQueueType
 {
+    public string? Name => nameof(EventNotificationErrorsQueue);
+    public string? Schema => "dbo";
+    public bool? Status => true;
+    public bool? Retention => false;
+    public bool? PoisonMessageHandling => false;
 }
