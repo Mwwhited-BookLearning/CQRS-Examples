@@ -1,4 +1,8 @@
 
+
+https://techcommunity.microsoft.com/t5/azure-sql-blog/cross-instance-service-broker-message-exchange-for-azure-sql/ba-p/2217323
+
+
 SELECT *
 FROM sys.service_message_types
 select *
