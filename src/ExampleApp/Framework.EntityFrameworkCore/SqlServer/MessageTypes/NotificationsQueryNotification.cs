@@ -1,9 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.MessageBroker;
 
 namespace Framework.EntityFrameworkCore.SqlServer.MessageTypes
 {
     [MessageType(Name = "http://schemas.microsoft.com/SQL/Notifications/QueryNotification", Validation = MessageTypeValidations.WellFormedXml)]
-    public class QueryNotification : IMessageType
+    public class NotificationsQueryNotification : IMessageType
     {
     }
 

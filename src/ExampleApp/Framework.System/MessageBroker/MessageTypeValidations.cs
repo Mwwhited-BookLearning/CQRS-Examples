@@ -1,4 +1,4 @@
-﻿namespace System.ComponentModel.DataAnnotations;
+﻿namespace System.MessageBroker;
 
 public enum MessageTypeValidations
 {

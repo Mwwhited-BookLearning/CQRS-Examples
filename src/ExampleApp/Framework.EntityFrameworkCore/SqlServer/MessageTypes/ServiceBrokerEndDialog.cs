@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.MessageBroker;
 
 namespace Framework.EntityFrameworkCore.SqlServer.MessageTypes
 {

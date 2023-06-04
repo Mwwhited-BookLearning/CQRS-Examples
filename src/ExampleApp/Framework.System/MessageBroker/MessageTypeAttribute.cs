@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace System.ComponentModel.DataAnnotations;
+﻿namespace System.MessageBroker;
 
 [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
 public class MessageTypeAttribute : Attribute
